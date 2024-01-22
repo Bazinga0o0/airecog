@@ -16,14 +16,14 @@ import time
 
 modellname = 'yolov8s.pt' #adjust the model here
 
-target_fps = 30 #can set it to anything prefered, but with higher fps, the aimbot tends to shake more
-confidence_t = 0.4 #depends on the used model, but 0.4 is a good value for yolov8s. Adjust it if people are not detected or other objects are detected as people
+target_fps = 40 #can set it to anything prefered, but with higher fps, the aimbot tends to shake more
+confidence_t = 0.35 #depends on the used model, but 0.4 is a good value for yolov8s. Adjust it if people are not detected or other objects are detected as people
 
 setoff_x = 120 #setoff from the center of the screen, can be used to adjust the aimbot / for example if playing 3rd person or if the own character is detected as a person
 setoff_y = 0
 
-show_lines = True #if true, the aimbot will draw lines to the targets
-draw_circle = True #if true, the aimbot will draw circles around the targets heads
+show_lines = False #if true, the aimbot will draw lines to the targets
+draw_circle = False #if true, the aimbot will draw circles around the targets heads
 
 box_width = 480 #size of the box in which the aimbot is active
 box_height = 480 #size of the box in which the aimbot is active
@@ -164,7 +164,7 @@ if __name__ == "__main__":
             print('TPS/FPS:', tpsCount, '/', fpsCount)
             fpsCount = tpsCount = 0
         time.sleep(0.01)
-        
+
     aim.terminate()
     engine.terminate()
     view.terminate()
