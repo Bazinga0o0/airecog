@@ -60,7 +60,7 @@ def p_engine(q_target, q_view, model_name, dims, q_target2):
                 x1, y1, x2, y2 = int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])
                 head_x, head_y, width, height = x1 + int((x2 - x1) / 2), y1 + int(.2 * (x2 - x1)), x2 - x1, y2 - y1
 
-                #anjust if alive characters can lay down or their width is bigger than their height
+                #adjust if alive characters can lay down or their width is bigger than their height
                 #Leave it as it is if you are playing a game where the players bodies remain on the ground after death, so that they are no longer detected
                 if width > height:
                     continue
